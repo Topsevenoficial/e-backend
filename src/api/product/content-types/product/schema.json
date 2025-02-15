@@ -1,0 +1,122 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "singularName": "product",
+    "pluralName": "products",
+    "displayName": "Product",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "productName": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "productName",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "active": {
+      "type": "boolean"
+    },
+    "price": {
+      "type": "decimal",
+      "required": true
+    },
+    "materialMontura": {
+      "type": "enumeration",
+      "enum": [
+        "TR90",
+        "Aluminio"
+      ]
+    },
+    "materialLente": {
+      "type": "enumeration",
+      "enum": [
+        "Policarbonato",
+        "TAC"
+      ]
+    },
+    "isFeatured": {
+      "type": "boolean"
+    },
+    "category": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::category.category"
+    },
+    "discount": {
+      "type": "integer",
+      "default": 0
+    },
+    "offerType": {
+      "type": "enumeration",
+      "enum": [
+        "nada",
+        "oferta",
+        "recién llegado",
+        "combo",
+        "temporada"
+      ]
+    },
+    "polarizado": {
+      "type": "boolean",
+      "default": true
+    },
+    "UV400": {
+      "type": "boolean",
+      "default": true
+    },
+    "marca": {
+      "type": "enumeration",
+      "enum": [
+        "KingSeven",
+        "Dubery"
+      ]
+    },
+    "reviews": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::review.review",
+      "mappedBy": "product"
+    },
+    "medidas": {
+      "type": "richtext"
+    },
+    "visionHD": {
+      "type": "boolean",
+      "default": true
+    },
+    "antiImpacto": {
+      "type": "boolean",
+      "default": true
+    },
+    "barreraDeslumbramiento": {
+      "type": "boolean",
+      "default": true
+    },
+    "limpiaFacil": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

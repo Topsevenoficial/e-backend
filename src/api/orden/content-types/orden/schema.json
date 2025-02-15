@@ -1,0 +1,76 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ordenes",
+  "info": {
+    "singularName": "orden",
+    "pluralName": "ordenes",
+    "displayName": "Orden"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "customer_first_name": {
+      "type": "string"
+    },
+    "customer_last_name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "phone_number": {
+      "type": "string"
+    },
+    "dni": {
+      "type": "biginteger"
+    },
+    "address": {
+      "type": "string"
+    },
+    "address_city": {
+      "type": "string"
+    },
+    "country_code": {
+      "type": "string"
+    },
+    "metodo_envio": {
+      "type": "enumeration",
+      "enum": [
+        "shalom",
+        "olva"
+      ]
+    },
+    "order_items": {
+      "type": "json"
+    },
+    "subtotal": {
+      "type": "integer"
+    },
+    "shipping_cost": {
+      "type": "integer",
+      "default": 0
+    },
+    "total": {
+      "type": "integer"
+    },
+    "order_status": {
+      "type": "enumeration",
+      "enum": [
+        "pendiente",
+        "envío en preparación",
+        "enviado",
+        "completado",
+        "cancelado"
+      ],
+      "default": "envío en preparación"
+    },
+    "payment": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::payment.payment",
+      "inversedBy": "orden"
+    }
+  }
+}

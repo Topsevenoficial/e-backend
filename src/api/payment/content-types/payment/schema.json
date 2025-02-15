@@ -1,0 +1,71 @@
+{
+  "kind": "collectionType",
+  "collectionName": "payments",
+  "info": {
+    "singularName": "payment",
+    "pluralName": "payments",
+    "displayName": "Payment",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "token": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "amount": {
+      "type": "integer"
+    },
+    "culqi_response": {
+      "type": "json"
+    },
+    "payment_status": {
+      "type": "string"
+    },
+    "customer_id": {
+      "type": "string"
+    },
+    "customer_data": {
+      "type": "json"
+    },
+    "first_name": {
+      "type": "string"
+    },
+    "last_name": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "address_city": {
+      "type": "string"
+    },
+    "country_code": {
+      "type": "string"
+    },
+    "phone_number": {
+      "type": "string"
+    },
+    "dni": {
+      "type": "biginteger"
+    },
+    "metodo_envio": {
+      "type": "enumeration",
+      "enum": [
+        "shalom",
+        "olva"
+      ]
+    },
+    "orden": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::orden.orden",
+      "mappedBy": "payment"
+    }
+  }
+}
