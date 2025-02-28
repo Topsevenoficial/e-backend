@@ -1,42 +1,63 @@
-// backend-ecommerce/scripts/seedShalom.js
+// scripts/seedShalom.js
+require("dotenv").config();
+const fs = require("fs");
+const path = require("path");
+const { Pool } = require("pg");
 
-'use strict';
+// Depuración: muestra el usuario configurado
+console.log("DATABASE_USERNAME:", process.env.DATABASE_USERNAME);
 
-const fs = require('fs');
-const path = require('path');
+// Ruta absoluta del archivo JSON
+const jsonFilePath = path.resolve(process.cwd(), "data", "agencias-shalom.json");
 
-async function seedShalom(strapi) {
+// Configuración de la conexión usando las variables de entorno
+const pool = new Pool({
+  connectionString: process.env.DATABASE_URL, // Se usará si está definida
+  host: process.env.DATABASE_HOST || "localhost",
+  port: process.env.DATABASE_PORT ? parseInt(process.env.DATABASE_PORT, 10) : 5432,
+  database: process.env.DATABASE_NAME || "strapi",
+  user: process.env.DATABASE_USERNAME || "strapi",
+  password: process.env.DATABASE_PASSWORD || "strapi",
+  ssl:
+    process.env.DATABASE_SSL === "true"
+      ? {
+          rejectUnauthorized:
+            process.env.DATABASE_SSL_REJECT_UNAUTHORIZED === "false" ? false : true,
+        }
+      : false,
+});
+
+async function seedData() {
   try {
-    // Verifica si ya existen registros en la colección shalom.
-    const existing = await strapi.entityService.findMany('api::shalom.shalom', {
-      fields: ['id'],
-      limit: 1,
-    });
-    if (existing && existing.length > 0) {
-      console.log('La colección Shalom ya tiene registros. Seeding abortado.');
-      return;
-    }
+    // Leer y parsear el archivo JSON
+    const data = JSON.parse(fs.readFileSync(jsonFilePath, "utf8"));
+    console.log(`Insertando ${data.length} registros en la tabla "shaloms"...`);
 
-    // Lee el archivo JSON
-    const filePath = path.join(__dirname, '..', 'data', 'agencias-shalom.json');
-    const rawData = fs.readFileSync(filePath, 'utf8');
-    const data = JSON.parse(rawData);
+    const client = await pool.connect();
+    try {
+      await client.query("BEGIN");
 
-    // Inserta cada registro en la colección
-    for (const item of data) {
-      await strapi.entityService.create('api::shalom.shalom', {
-        data: {
-          nombre: item.nombre,
-          ubicacion: item.ubicacion,
-          direccion: item.direccion,
-        },
-      });
-      console.log(`Creado: ${item.nombre}`);
+      // Inserta cada registro
+      for (const item of data) {
+        await client.query(
+          `INSERT INTO shaloms ("nombre", "ubicacion", "direccion") VALUES ($1, $2, $3)`,
+          [item.nombre, item.ubicacion, item.direccion]
+        );
+      }
+
+      await client.query("COMMIT");
+      console.log("Datos insertados exitosamente.");
+    } catch (err) {
+      await client.query("ROLLBACK");
+      console.error("Error durante la inserción. Se realizó rollback:", err);
+    } finally {
+      client.release();
     }
-    console.log('Seed completado exitosamente.');
-  } catch (error) {
-    console.error('Error al sembrar los datos:', error);
+  } catch (err) {
+    console.error("Error al leer el archivo JSON o en la conexión:", err);
+  } finally {
+    await pool.end();
   }
 }
 
-module.exports = seedShalom;
+seedData();
