@@ -27,7 +27,14 @@ export default [
       },
     },
   },
-  'strapi::cors',
+  {
+    name: 'strapi::cors',
+    config: {
+      origin: ['https://www.topsevenperu.com'],
+      methods: ['GET', 'POST', 'OPTIONS'],
+      headers: ['Content-Type'],
+    },
+  },
   'strapi::poweredBy',
   'strapi::query',
   'strapi::body',
