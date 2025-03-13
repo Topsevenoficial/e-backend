@@ -30,9 +30,10 @@ export default [
   {
     name: 'strapi::cors',
     config: {
-      origin: ['https://www.topsevenperu.com'],
-      methods: ['GET', 'POST', 'OPTIONS'],
-      headers: ['Content-Type'],
+      origin: ['http://localhost:3000', 'http://localhost:1337'],
+      methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'HEAD', 'OPTIONS'],
+      headers: ['Content-Type', 'Authorization', 'Origin', 'Accept'],
+      keepHeaderOnError: true,
     },
   },
   'strapi::poweredBy',
