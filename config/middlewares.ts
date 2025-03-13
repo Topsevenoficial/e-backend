@@ -48,13 +48,19 @@ export default [
       },
     },
   },
-  corsMiddleware,
   {
     name: 'strapi::cors',
     config: {
-      origin: ['http://localhost:3000', 'http://localhost:1337'],
-      methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'HEAD', 'OPTIONS'],
+      origin: [
+        process.env.FRONTEND_URL,
+        'https://agencias-shalom.com',
+        'https://api.agencias-shalom.com',
+        'http://localhost:3000',
+        'http://localhost:1337'
+      ],
+      methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'HEAD', 'OPTIONS'],
       headers: ['Content-Type', 'Authorization', 'Origin', 'Accept'],
+      credentials: true,
       keepHeaderOnError: true,
     },
   },
