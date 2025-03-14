@@ -517,7 +517,7 @@
     {
         "nombre": "La Merced",
         "ubicacion": "Junin / Chanchamayo / La Merced / La Merced",
-        "direccion": "Av. Perú 931, Sector Pampa Del Carmen, Referencia: Frente A La Cooperativa"
+        "direccion": "Av. Perú 545, Sector Pampa Del Carmen, La Merced - Chanchamayo - Junín, Re. Frente A La Cooperativa"
     },
     {
         "nombre": "Perene",
@@ -557,7 +557,7 @@
     {
         "nombre": "Tarma",
         "ubicacion": "Junin / Tarma / Tarma / Tarma",
-        "direccion": "Jr. Amazonas N° 1164 - Tarma - Junín, Ref. Entre Jr. Amazonas Con Av. Vienrich (a Dos Puertas Del Antiguo Local)"
+        "direccion": "Jr. Amazonas Nro. 1164 Tarma - Junín, Ref. entre Jr. Amazonas Con Av. Vienrich"
     },
     {
         "nombre": "La Oroya",
@@ -650,8 +650,8 @@
         "direccion": "Av. Industrial N° 578 Guadalupe, Pacasmayo, La Libertad, Ref. A Media Cuadra Antes De La Universidad Nacional De Trujillo – Carretera A Chiclayo"
     },
     {
-        "nombre": "Pacasmayo",
-        "ubicacion": "La Libertad / Pacasmayo / Pacasmayo / Pacasmayo",
+        "nombre": "Pacasmayo Las Palmeras",
+        "ubicacion": "La Libertad / Pacasmayo / Pacasmayo / Pacasmayo Las Palmeras",
         "direccion": "Ctra. Panamericana Norte N° Mz. P Lt. 4a - A.h. Las Palmeras, Referencia: Entre Av. Sucre Y Av. Leoncio Prado"
     },
     {
@@ -825,6 +825,11 @@
         "direccion": "Av. Túpac Amaru Km. 23.5 - Carabayllo, Ref. Frente A La Iglesia De Mormones - A Una Cdra. Del Último Paradero Del Rápido"
     },
     {
+        "nombre": "Av. José Saco Rojas - Carabayllo",
+        "ubicacion": "Lima / Lima / Carabayllo / Av. José Saco Rojas - Carabayllo",
+        "direccion": "Av. José Saco Rojas Mz. A Lt. 15 Programa De Vivienda El Pino, San Antonio - Carabayllo, Ref. Frente Al Chifa Hong Fu Y A 3 Cuadras Del Gran Mercado El Pino"
+    },
+    {
         "nombre": "Chorrillos",
         "ubicacion": "Lima / Lima / Chorrillos / Chorrillos",
         "direccion": "Av. Santa Anita N°611 - Urb. Villa Marina, Referencia: A Una Cdra. De La Entrada A San Genaro"
@@ -975,8 +980,8 @@
         "direccion": "Av. Circunvalación Mz. A Lt. 1 - D C - P Santa María De Huachipa - Lurigancho - Chosica, Ref. Entre La Av. Circunvalación Y La Av. Huachipa"
     },
     {
-        "nombre": "Lurin",
-        "ubicacion": "Lima / Lima / Lurin / Lurin",
+        "nombre": "Nuevo Lurin",
+        "ubicacion": "Lima / Lima / Lurin / Nuevo Lurin",
         "direccion": "Av. Antigua Panamericana Sur Km 37 Mz C Lt 17 - Fundo Las Salinas - Referencia A Cuadra Y Media Del Mercado Virgen De Las Mercedes."
     },
     {
@@ -990,8 +995,8 @@
         "direccion": "Av. La Marina 1640 - Referencia : A Una Cuadra Del Centro Comercial Plaza San Miguel"
     },
     {
-        "nombre": "Cieneguilla",
-        "ubicacion": "Lima / Lima / Pachacamac / Cieneguilla",
+        "nombre": "Manchay Entrada",
+        "ubicacion": "Lima / Lima / Pachacamac / Manchay Entrada",
         "direccion": "Kilómetro 11.5 Autopista Cieneguilla En La Entrada De Manchay (referencia A Media Cuadra De Mi Banco)"
     },
     {
@@ -1095,8 +1100,8 @@
         "direccion": "Av. Miguel Angel Nro 177 - 183"
     },
     {
-        "nombre": "Av. Canta Callao - Smp",
-        "ubicacion": "Lima / Lima / San Martin De Porres / Av. Canta Callao - Smp",
+        "nombre": "Av. Canta Callao  Con Alisos",
+        "ubicacion": "Lima / Lima / San Martin De Porres / Av. Canta Callao Con Alisos",
         "direccion": "Av. Canta Callao, Mz. A Lt. 3 Urb. Arizona - 2da Etapa"
     },
     {
@@ -1295,8 +1300,8 @@
         "direccion": "Jr. Pablo Rossell 590 Con Nanay, Ref. Cruce Con Av. Nanay Frente Al Instituto Cepro América Computer"
     },
     {
-        "nombre": "San Juan Bautista - Iquitos",
-        "ubicacion": "Loreto / Maynas / San Juan Bautista / San Juan Bautista - Iquitos",
+        "nombre": "Iquitos - San Juan Bautista",
+        "ubicacion": "Loreto / Maynas / San Juan Bautista / Iquitos - San Juan Bautista",
         "direccion": "Av. Participación Parcela 9-a San Juan Bautista - Maynas - Loreto, Ref. Frente Al Lavadero Osito Y A Media Cdra. Del Parque 1 De Enero"
     },
     {
@@ -1308,6 +1313,11 @@
         "nombre": "Tambopata Av La Joya Co",
         "ubicacion": "Madre De Dios / Tambopata / Tambopata / Tambopata Av La Joya Co",
         "direccion": "Av. La Joya N° 122 - Pto. Maldonado, Referencia: Frente Al Óvalo De Los Otorongos"
+    },
+    {
+        "nombre": "Jr. Jaime Troncoso",
+        "ubicacion": "Madre De Dios / Tambopata / Tambopata / Jr. Jaime Troncoso",
+        "direccion": "Jr. Jaime Troncoso 442, Tambopata - Madre De Dios, Ref. A Media Cdra. Del Jardin Piloto / A Media Cdra. De La Empresa Real Dorado"
     },
     {
         "nombre": "Mazuko",
@@ -1347,7 +1357,7 @@
     {
         "nombre": "Oxapampa",
         "ubicacion": "Pasco / Oxapampa / Oxapampa / Oxapampa",
-        "direccion": "Jr. Loechle Con Kennedy S/n Oxapampa - Pasco, Referencia: Al Costado Del Terminal Terrestre De Oxapampa"
+        "direccion": "Jr. Lima Con Jr. Frey S/n oxapampa - Pasco, Ref. a 1 Cdra. Del Coliseo Municipal De Oxapampa"
     },
     {
         "nombre": "Villa Rica",
@@ -1512,7 +1522,7 @@
     {
         "nombre": "Las Mercedes",
         "ubicacion": "Puno / San Roman / Juliaca / Las Mercedes",
-        "direccion": "Pasaje Porvenir N° 273, Esquina Con Jr. Texas, Ref. A Una Cdra. Del Terminal Las Mercedes"
+        "direccion": "Jr. Porvenir N° 228 Urb. Las Mercedes, San Roman - Puno, Ref. A Una Cdra. De La Av. Circunvalacion Oeste - A Una Cdra. Del Terminal Las Mercedes"
     },
     {
         "nombre": "Moyobamba",
@@ -1558,6 +1568,16 @@
         "nombre": "Jr Leoncio Prado",
         "ubicacion": "San Martin / San Martin / Tarapoto / Jr Leoncio Prado",
         "direccion": "Jr. Leoncio Prado N° 1175, Referencia: A Una Cuadra Del Instituto María Parado De Bellido"
+    },
+    {
+        "nombre": "Jr. Tahuantinsuyo",
+        "ubicacion": "San Martin / San Martin / Tarapoto / Jr. Tahuantinsuyo",
+        "direccion": "Jr. Tahuantinsuyo N° 158 - Tarapoto - San Martín, Ref. Al Costado Del Grifo San Martín"
+    },
+    {
+        "nombre": "Jr. Ramón Castilla",
+        "ubicacion": "San Martin / San Martin / Tarapoto / Jr. Ramón Castilla",
+        "direccion": "Jr. Ramon Castilla N°1362 Tarapoto - San Martin, Ref. A Media Cdra. De Mannucci Motor S.a."
     },
     {
         "nombre": "Tarapoto La Banda De Shilcayo",
